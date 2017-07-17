@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<button type="button" name="with" onclick="iwith()">calltheWith</button>
+<button type="button" name="depth" onclick="idepth()">Depth</button>
+<button type="button" name="newdoc" onclick="newDoc()">newDoc</button>
+<button type="button" name="navi" onclick="myFunc()">myFunct</button>
+<p id="with"></p>
+
+<p id="depth"></p>
+
+<p id="navi"></p>
+<p id="demo"></p>
+
+<button onclick="clearInterval(myVar)">Stop time</button>
+
+
+<script>
+var myVar = setInterval(myTimer, 1);
+function myTimer() {
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+
+function myFunc()
+{
+var text;
+  var person=prompt("type something here!","this is second");
+  if(person==null || person=="")
+{
+  text="You typed nothing";
+}
+else {
+text=" you typed "+person;
+}
+  document.getElementById("navi").innerHTML=text;
+}
+
+function navi()
+
+{
+
+document.getElementById('navi').innerHTML=navigator.userAgent+"<br>"+navigator.userLocation+"<br>"+navigator.userLocation+navigator.useSpinner;
+}
+function newDoc() {
+    window.location.assign("https://www.google.com")
+}
+function iwith()
+{
+  document.getElementById('with').innerHTML= screen.width;
+}
+
+function idepth()
+{
+  document.getElementById('depth').innerHTML=screen.pixelDepth;
+}
+
+</script>
+
+</body>
+</html>
